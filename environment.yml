@@ -1,0 +1,10 @@
+name: Ex_Find
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pyside6>=6.6
+  - pywin32>=306
+  - pytest>=8
+  - ruff>=0.5

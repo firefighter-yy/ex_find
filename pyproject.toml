@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel-information-search"
+version = "0.1.0"
+description = "Local Windows desktop tool for searching Excel workbooks"
+requires-python = ">=3.10"
+dependencies = [
+  "PySide6>=6.6",
+  "pywin32>=306; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+excel-search = "ex_transform.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
