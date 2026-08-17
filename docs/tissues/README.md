@@ -15,7 +15,7 @@
 | --- | --- | --- | --- | --- | --- |
 | [TISSUE-001](./TISSUE-001-project-foundation.md) | 建立工程基础与环境诊断 | 工程 | P0 | 无 | 完成 |
 | [TISSUE-002](./TISSUE-002-excel-com-ingestion.md) | Excel COM 只读分块读取 | 功能 | P0 | 001 | 完成 |
-| [TISSUE-003](./TISSUE-003-session-index.md) | 会话级 SQLite 索引与文件准备 | 功能 | P0 | 001、002 的数据契约 | 待办 |
+| [TISSUE-003](./TISSUE-003-session-index.md) | 会话级 SQLite 索引与文件准备 | 功能 | P0 | 001、002 的数据契约 | 完成 |
 | [TISSUE-004](./TISSUE-004-search-engine.md) | 值标准化与行级搜索引擎 | 功能 | P0 | 003 | 待办 |
 | [TISSUE-005](./TISSUE-005-minimal-ui.md) | 极简搜索与结果预览界面 | 功能 | P0 | 001、003、004 | 待办 |
 | [TISSUE-006](./TISSUE-006-export-fidelity-spike.md) | 导出格式保真原型与 ADR-0002 | 技术验证 | P0 | 002 | 待办 |
