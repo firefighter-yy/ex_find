@@ -1,6 +1,6 @@
 # TISSUE-008：取消、恢复、集成验收与打包
 
-- 状态：待办
+- 状态：进行中
 - 类型：工程
 - 优先级：P1
 - 依赖：TISSUE-002 至 TISSUE-007
@@ -63,3 +63,12 @@
 - Windows 安装产物。
 - 安装说明、发布说明和已知限制。
 
+## 已实现
+
+- `src/ex_transform/hardening.py` 提供统一任务状态、协作式取消、关闭等待和错误分类。
+- UI 的准备、搜索、导出任务共用一个协调器；关闭窗口时先取消并等待后台任务，再关闭 SQLite 索引。
+- 启动时清理遗留会话索引，导出目录清理应用创建的过期临时文件，并通过临时文件原子发布结果。
+- `excel-search.spec` 和 `scripts/build-windows.ps1` 提供 PyInstaller Windows 构建流程。
+- `docs/release-notes-0.1.0.md` 记录支持范围、安装、卸载、依赖追溯和已知限制。
+
+真实 Excel COM、Windows 缩放、安装升级和卸载验收需要在目标 Windows/Office 环境执行；当前开发环境已完成 34 项自动化测试，3 项 COM 集成测试按环境变量跳过。

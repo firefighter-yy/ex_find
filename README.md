@@ -43,3 +43,10 @@ by the foundation layer except through the read-only `ExcelApplication.open_read
 Set `EXCEL_SEARCH_TEMP_ROOT` to place per-session temporary indexes under a chosen directory,
 or `EXCEL_SEARCH_LOG_LEVEL` to change the application log level. Logs redact workbook paths and
 do not contain cell contents or search terms.
+
+## Windows packaging
+
+Run `scripts\build-windows.ps1` from the `Ex_Find` environment. The script runs the test
+suite and creates `dist\ExcelInformationSearch.exe` with an embedded Python runtime.
+Supported platforms, installation steps, and known limitations are documented in
+`docs\release-notes-0.1.0.md`.
