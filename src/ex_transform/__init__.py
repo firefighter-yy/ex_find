@@ -15,6 +15,26 @@ from .excel_ingestion import (
     WorksheetChunk,
     WorksheetInfo,
 )
+from .exporter import (
+    ExcelComExporter, ExportCancelledError, ExportError, ExportProgress, ExportResult, ExportService, ExportSnapshot,
+    cleanup_stale_exports,
+)
+from .search_engine import (
+    FormulaMode,
+    MatchMode,
+    SearchEngine,
+    SearchError,
+    SearchOperator,
+    SearchPage,
+    SearchResult,
+    SearchService,
+    normalize_display_value,
+    normalize_value,
+)
+
+from .export_fidelity import ExportFidelitySpike, ExportMode, ExportResult as FidelityExportResult, ExportRow
+from .hardening import ClassifiedError, ErrorCategory, TaskCoordinator, TaskState, classify_error
+
 from .session_index import (
     FilePreparation,
     FilePreparationService,
@@ -57,4 +77,31 @@ __all__ = [
     "WorksheetInfo",
     "__version__",
     "cleanup_stale_sessions",
+    "ExportFidelitySpike",
+    "ExportMode",
+    "FidelityExportResult",
+    "ExportRow",
+    "ExcelComExporter",
+    "ExportCancelledError",
+    "ExportError",
+    "ExportProgress",
+    "ExportResult",
+    "ExportService",
+    "ExportSnapshot",
+    "cleanup_stale_exports",
+    "FormulaMode",
+    "MatchMode",
+    "SearchEngine",
+    "SearchError",
+    "SearchOperator",
+    "SearchPage",
+    "SearchResult",
+    "SearchService",
+    "normalize_display_value",
+    "normalize_value",
+    "ClassifiedError",
+    "ErrorCategory",
+    "TaskCoordinator",
+    "TaskState",
+    "classify_error",
 ]
