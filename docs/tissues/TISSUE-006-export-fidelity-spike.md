@@ -1,6 +1,6 @@
 # TISSUE-006：导出格式保真原型与 ADR-0002
 
-- 状态：待办
+- 状态：完成
 - 类型：技术验证
 - 优先级：P0
 - 依赖：TISSUE-002
@@ -65,4 +65,11 @@
 - 样本工作簿和验证记录。
 - 性能与文件大小对比。
 - `docs/adr/0002-*.md`。
+
+
+## 实现
+
+- 原型入口：src/ex_transform/export_fidelity.py。
+- 单元测试：`tests/test_export_fidelity.py`。
+- 真实 Excel 验证可通过设置 EXCEL_COM_INTEGRATION=1 后调用 ExportFidelitySpike.export 分别运行两种模式，并核对源文件哈希、大小和修改时间。
 
